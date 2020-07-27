@@ -1,0 +1,37 @@
+name: 'AWS SAM WS SAM CLI pip3 and python 3.6 , 3.7 , 3.8 Github Action'
+description: 'Build and Deploy AaWS SAM CLI pip3 and python 3.6 , 3.7 , 3.8 Serverless Apps using GitHub Actions.'
+author: 'ncleguizamon'
+branding:
+  icon: 'cloud'
+  color: 'blue'
+inputs:
+  SAMCLICONFIG:
+    description: 'AWS SAM subcommand to execute.'
+    required: false
+    default: false
+  TEMPLATEFILE:
+    description: 'file template'
+    required: false
+    default: 'template.yaml'
+  STACK:
+    description: 'name STACK'
+    required: false
+  S3_BUCKET:
+    description: 's3 bucket'
+    required: false
+  CAPABILITIES:
+    description: 'capabilities'
+    required: false
+    default: 'CAPABILITY_IAM'
+  AWS_DEFAULT_REGION:
+    description: 'REGION aws deploy'
+    required: false
+    default: 'us-east-1'
+  PARAMETER_OVERRIDES:
+    description: 'parametros'
+    required: false
+    default: ''
+  
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
