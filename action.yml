@@ -30,7 +30,7 @@ inputs:
   PARAMETER_OVERRIDES:
     description: 'parametros'
     required: false
-    default: ''
+    default: 'deploy=awscli-Action'
   
 runs:
   using: 'docker'
