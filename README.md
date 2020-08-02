@@ -1,6 +1,6 @@
 # aws-sam-python-action
 
-```
+```yaml
 on: [push]
 
 jobs:
